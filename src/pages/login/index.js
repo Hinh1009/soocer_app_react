@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import { useHistory, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+const HOMEPAGE = 'http://localhost:3000/'
+
 class login extends Component {
   state = {
     email: '',
@@ -25,9 +28,12 @@ class login extends Component {
       email: this.state.email,
       password: this.state.password
     }
+
+    console.log(user)
     Axios.post('http://localhost:1900/api/auth/sign-in', user)
-      .then((mess) => {
-        alert(`${this.state.email} login success`)
+      .then(() => {
+        // alert(`${this.state.email} login success`)
+        window.location.href = HOMEPAGE
       })
       .catch((err) => {
         alert("Login failed", err)

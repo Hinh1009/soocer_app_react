@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
-import { Router, Link } from 'react-router-dom'
-import { Layout } from 'antd'
+import { Link } from 'react-router-dom'
+import { Layout, Button } from 'antd'
 
 const { Header, Content, Footer } = Layout
 class Home extends Component {
-    constructor(props) {
-        super(props)
-    }
-
+    
     render() {
         return (
             <Layout>
-                <Header> THis is header</Header>
+                <Header>
+                    <div>This is my soccer app</div>
+                    <Link to="/Login">
+                        <Button>Log in</Button>
+                    </Link>
+                </Header>
                 <Content> This is content</Content>
                 <Footer>This is Footer</Footer>
             </Layout>

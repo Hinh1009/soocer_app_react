@@ -6,10 +6,9 @@ import Home from './pages/home'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import { Button } from 'antd'
+
 // import './App.css'
 class App extends Component {
   render() {
@@ -27,12 +26,6 @@ class App extends Component {
               <Register />
             </Route>
           </Switch>
-          <Link to="/login">
-            <Button exact="true">Login</Button>
-          </Link>
-          {/* <Link to="/register">
-            <Button exact="true">Sign up</Button>
-          </Link> */}
         </div>
       </Router>
 
