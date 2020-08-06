@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 
 class Table extends Component {
-  constructor(props = { list, header }) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   renderHeader(header) {
     return (
       <tr>
         {header.map((item, i) => {
           return (
-            <th key={i}>{item}</th>
+            <td key={i}>{item}</td>
           )
         })}
       </tr>
@@ -19,20 +19,20 @@ class Table extends Component {
 
   renderList(list) {
     return list.map((item, i) => {
-      let { title, description, categories } = item
+      let { tenCauThu, soAo, CLB } = item
       return (
         <tr key={i}>
-          <td>{title}</td>
-          <td>{description}</td>
-          <td>{this.getCategoryTitles(categories)}</td>
+          <td>{tenCauThu}</td>
+          <td>{soAo}</td>
+          <td>{this.getTeams(CLB)}</td>
         </tr>
       )
     })
   }
 
-  getCategoryTitles(categories = []) {
-    return categories
-      .map(item => item.title || '')
+  getTeams(teams = []) {
+    return teams
+      .map(item => item.tenCauThu || '')
       .join()
   }
 

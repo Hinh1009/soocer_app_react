@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Layout, Button } from 'antd'
+import { Layout } from 'antd'
+import Button from '../../components/pieces/Button'
 
 const { Header, Content, Footer } = Layout
 class Home extends Component {
-    
+
     render() {
         return (
             <Layout>
@@ -14,7 +15,11 @@ class Home extends Component {
                         <Button>Log in</Button>
                     </Link>
                 </Header>
-                <Content> This is content</Content>
+                <Content>
+                    <ul>
+                        <li><Link to="/player">Player Info</Link></li>
+                    </ul>
+                </Content>
                 <Footer>This is Footer</Footer>
             </Layout>
         )

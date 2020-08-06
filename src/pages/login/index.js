@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom'
-
 const HOMEPAGE = 'http://localhost:3000/'
 
 class login extends Component {
@@ -23,7 +22,7 @@ class login extends Component {
       email: newEmail
     })
   }
-  handleSubmit = () => {
+  handleClick = () => {
     let user = {
       email: this.state.email,
       password: this.state.password
@@ -46,7 +45,7 @@ class login extends Component {
         <input onChange={this.handleEmail} placeholder="Email" /> <br />
         <input onChange={this.handlePassWord} type="password" placeholder="Password" /> <br />
         <Link to="/register">Not have an account? Register now<br /></Link>
-        <button onClick={this.handleSubmit}> Log in </button>
+        <button onClick={this.handleClick}>Log in</button>
 
       </div>
 
