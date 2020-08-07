@@ -19,22 +19,24 @@ class Table extends Component {
 
   renderList(list) {
     return list.map((item, i) => {
-      let { tenCauThu, soAo, CLB } = item
+      let { tenCauThu, soAo, viTri, tenDoiBong } = item
       return (
         <tr key={i}>
           <td>{tenCauThu}</td>
           <td>{soAo}</td>
-          <td>{this.getTeams(CLB)}</td>
+          <td>{viTri}</td>
+          <td>{this.getTeams(tenDoiBong)}</td>
         </tr>
       )
     })
   }
 
-  getTeams(teams = []) {
-    return teams
+  getTeams(CLB = []) {
+    return CLB
       .map(item => item.tenCauThu || '')
       .join()
   }
+
 
   render() {
     let list = this.props.list || []

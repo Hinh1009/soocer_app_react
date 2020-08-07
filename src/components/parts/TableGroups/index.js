@@ -12,14 +12,14 @@ class TableGroup extends Component {
         this.state = {
             requesting: false,
             listInQueue: false,
-            TableHeader: ['tenCauThu', 'soAo', 'CLB'],
+            TableHeader: ['tenCauThu', 'soAo','viTri', 'tenDoiBong'],
             list: [],
             count: 0,
             pageIndex: 1,
             pageSize: 5,
             search: '',
             filter: {
-                CLBId: ''
+                clubId: ''
             },
             optionClubs: [
                 { value: '', text: "Select club" }
@@ -52,7 +52,7 @@ class TableGroup extends Component {
             mustCallList = true
             mustCallCount = true
         }
-        if (newState.filter.CLBId !== oldState.filter.CLBId) {
+        if (newState.filter.clubId !== oldState.filter.clubId) {
             mustCallList = true
             mustCallCount = true
         }
@@ -74,7 +74,7 @@ class TableGroup extends Component {
         let queryParams = {
             count: true,
             search,
-            CLBId: filter.CLBId || ''
+            clubId: filter.clubId || ''
         }
         axios.request({
             url: 'http://localhost:1900/api/player',
@@ -100,7 +100,7 @@ class TableGroup extends Component {
             pageIndex,
             pageSize,
             search,
-            CLBId: filter.CLBId || ''
+            clubId: filter.clubId || ''
         }
 
         axios.request({
@@ -108,8 +108,10 @@ class TableGroup extends Component {
             method: 'GET',
             params: queryParams
         }).then(res => {
+            console.log("response",res)
             let list = res.data
             this.setState({ list })
+            console.log("list",list)
         })
     }
 
@@ -119,9 +121,10 @@ class TableGroup extends Component {
             method: 'GET',
         }).then(res => {
             let clubs = res.data
+            console.log("clubs",clubs)
             let optionClubs = [
                 { value: '', text: 'Select club' }, ...clubs.map(club => {
-                    return { value: club._id, text: club.tenDoiBong }
+                    return { value: clubs._id, text: club.tenDoiBong }
                 })
             ]
             this.setState({ optionClubs })
@@ -140,10 +143,10 @@ class TableGroup extends Component {
                         }}
                         placeholder="Enter search keywords..." />
                     <CDropdown
-                        value={filter.CLBId}
+                        value={filter.clubId}
                         options={optionClubs}
                         onChange={(value) => {
-                            this.setPageConfig({ filter: { CLBId: value } })
+                            this.setPageConfig({ filter: { clubId: value } })
                         }}
                     />
                 </div>

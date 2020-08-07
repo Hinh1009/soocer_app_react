@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom'
 const HOMEPAGE = 'http://localhost:3000/'
 
 class login extends Component {
-  state = {
-    email: '',
-    password: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: '',
+      password: ''
+    }
   }
+
   handlePassWord = (e) => {
     e.preventDefault()
     let newPassword = e.target.value
