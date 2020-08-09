@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import CTitle from '../../components/pieces/Title'
 import CSpacer from '../../components/pieces/Spacer'
 import CTableGroup from '../../components/parts/TableGroups'
+import { Layout } from 'antd'
 
+const { Header, Footer, Content } = Layout
 class Player extends Component {
     constructor(props) {
         super(props)
@@ -10,11 +12,18 @@ class Player extends Component {
 
     render() {
         return (
-            <div>
-                <CTitle>Player Info</CTitle>
-                <CSpacer></CSpacer>
-                <CTableGroup></CTableGroup>
-            </div>
+            <Layout>
+                <Header>This is Header</Header>
+                <Content className="container">
+                <div>
+                    <CTitle>Player Info</CTitle>
+                    <CSpacer></CSpacer>
+                    <CTableGroup></CTableGroup>
+                </div>
+                </Content>
+                
+            </Layout>
+
         )
     }
 }

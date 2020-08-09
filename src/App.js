@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './pages/login';
 import Register from './pages/register';
 import Home from './pages/home';

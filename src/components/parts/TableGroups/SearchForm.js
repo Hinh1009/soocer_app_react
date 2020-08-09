@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Input } from 'antd'
 
 class SearchForm extends Component {
   constructor(props) {
@@ -11,17 +12,19 @@ class SearchForm extends Component {
     if (this.props.onChange instanceof Function) {
       let value = e.target.value
       this.props.onChange(value)
+      console.log(value)
     }
   }
 
   render() {
     let { value, placeholder } = this.props
     return (
-      <form className="search-form">
-        <input value={value}
-          onChange={this.onChange}
-          placeholder={placeholder} />
-      </form>
+      <Input
+        className="search-form"
+        value={value}
+        onChange={this.onChange}
+        placeholder={placeholder}
+        style={{ borderRadius:'50px' }} />
     )
   }
 }

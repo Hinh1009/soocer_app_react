@@ -12,7 +12,7 @@ class TableGroup extends Component {
         this.state = {
             requesting: false,
             listInQueue: false,
-            TableHeader: ['tenCauThu', 'soAo','viTri', 'tenDoiBong'],
+            TableHeader: ['Name', 'Number','Position', 'Clubs'],
             list: [],
             count: 0,
             pageIndex: 1,
