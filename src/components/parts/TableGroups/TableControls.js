@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Cbutton from '../../pieces/Button'
 import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons'
+
 class TableControls extends Component {
   constructor(props) {
     super(props)

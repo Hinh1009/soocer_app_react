@@ -19,20 +19,24 @@ class Table extends Component {
 
   renderList(list) {
     return list.map((item, i) => {
-      let { tenCauThu, soAo, viTri, tenDoiBong } = item
+      let { tenCauThu, avatarUrl, soAo, viTri, club, quocTich } = item
+      // console.log("item club", tenDoiBong)
       return (
         <tr key={i}>
-          <td>{tenCauThu}</td>
+          <td><a href="#"
+            style={{ color: 'black' }}
+          ><img src={avatarUrl} /> {tenCauThu}</a></td>
           <td>{soAo}</td>
           <td>{viTri}</td>
-          <td>{this.getTeams(tenDoiBong)}</td>
+          <td>{quocTich}</td>
+          <td>{this.getClubs(club)}</td>
         </tr>
       )
     })
   }
 
-  getTeams(CLB = []) {
-    return CLB
+  getClubs(club = []) {
+    return club
       .map(item => item.tenCauThu || '')
       .join()
   }

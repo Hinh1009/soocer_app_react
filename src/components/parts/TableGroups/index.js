@@ -12,7 +12,7 @@ class TableGroup extends Component {
         this.state = {
             requesting: false,
             listInQueue: false,
-            TableHeader: ['Name', 'Number','Position', 'Clubs'],
+            TableHeader: ['Name', 'Number', 'Position', 'National', 'Clubs'],
             list: [],
             count: 0,
             pageIndex: 1,
@@ -77,7 +77,7 @@ class TableGroup extends Component {
             clubId: filter.clubId || ''
         }
         axios.request({
-            url: 'http://localhost:1900/api/player',
+            url: 'http://localhost:1900/api/players',
             method: 'GET',
             params: queryParams
         }).then(
@@ -104,14 +104,13 @@ class TableGroup extends Component {
         }
 
         axios.request({
-            url: 'http://localhost:1900/api/player',
+            url: 'http://localhost:1900/api/players',
             method: 'GET',
             params: queryParams
         }).then(res => {
-            console.log("response",res)
             let list = res.data
             this.setState({ list })
-            console.log("list",list)
+            console.log("list", list)
         })
     }
 
@@ -121,10 +120,10 @@ class TableGroup extends Component {
             method: 'GET',
         }).then(res => {
             let clubs = res.data
-            console.log("clubs",clubs)
+            console.log("clubs", clubs)
             let optionClubs = [
                 { value: '', text: 'Select club' }, ...clubs.map(club => {
-                    return { value: clubs._id, text: club.tenDoiBong }
+                    return { value: club._id, text: club.tenDoiBong }
                 })
             ]
             this.setState({ optionClubs })
