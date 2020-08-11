@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CDropdown from '../../pieces/Dropdown'
-import CTable from '../../pieces/Table'
+import CTable from '../../pieces/PlayerTable'
 import SearchForm from './SearchForm'
 import TableControls from './TableControls'
 import axios from 'axios'
