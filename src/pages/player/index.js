@@ -21,7 +21,7 @@ class Player extends Component {
                     <CTableGroup></CTableGroup>
                 </div>
                 </Content>
-                
+               <Footer>This is Footer</Footer> 
             </Layout>
 
         )
