@@ -31,11 +31,10 @@ class TableControls extends Component {
       // setTimeout(this.props.callApiList(),1)
     }
   }
-  changeBackground(e) {
+  changeBackground (e){
     e.preventDefault()
     e.target.style.background = 'blue'
   }
-
   render() {
     let { count, pageIndex, pageSize } = this.props
     let maxPage = Math.ceil(count / pageSize)

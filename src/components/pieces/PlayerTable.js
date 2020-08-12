@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
 class Table extends Component {
+  // constructor(props) {
+  //   super(props)
+  // }
 
   renderHeader(header) {
     return (
@@ -34,7 +37,7 @@ class Table extends Component {
 
   getClubs(club = []) {
     return club
-      .map(item => item.tenDoiBong || '')
+      .map(item => item.tenCauThu || '')
       .join()
   }
 
