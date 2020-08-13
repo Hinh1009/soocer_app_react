@@ -5,16 +5,13 @@ import Register from './pages/register';
 import Home from './pages/home';
 import Fixture from './pages/fixture';
 import Player from './pages/player';
-import Table from './pages/table';
-import './components/fontawesome'
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import './App.css';
-
-
+import './App.css'
+// import './App.css'
 class App extends Component {
   render() {
     return (
@@ -35,9 +32,6 @@ class App extends Component {
             </Route>
             <Route path='/player' exact>
               <Player />
-            </Route>
-            <Route path='/table' exact>
-              <Table />
             </Route>
           </Switch>
         </div>
