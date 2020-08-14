@@ -35,7 +35,7 @@ class App extends Component {
             <Route path='/player' exact>
               <Player />
             </Route>
-            <Route path='tables'>
+            <Route path='/tables'>
               <Tables />
             </Route>
           </Switch>
