@@ -5,6 +5,8 @@ import Register from './pages/register';
 import Home from './pages/home';
 import Fixture from './pages/fixture';
 import Player from './pages/player';
+import Tables from './pages/tables';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,6 +34,9 @@ class App extends Component {
             </Route>
             <Route path='/player' exact>
               <Player />
+            </Route>
+            <Route path='tables'>
+              <Tables />
             </Route>
           </Switch>
         </div>

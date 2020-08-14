@@ -5,7 +5,7 @@ import '../../scss/main.scss'
 export default class LogoImg extends Component {
     render() {
         return (
-            <a href="#home" style={{ display: "inline-block" }} >
+            <a href="/" style={{ display: "inline-block" }} >
                 <img src={Logo} width="100" height="100"  className="logo"></img>
             </a>
         )

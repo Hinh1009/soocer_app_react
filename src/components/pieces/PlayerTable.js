@@ -37,7 +37,7 @@ class Table extends Component {
 
   getClubs(club = []) {
     return club
-      .map(item => item.tenCauThu || '')
+      .map(item => item.tenDoiBong || '')
       .join()
   }
 

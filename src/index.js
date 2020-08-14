@@ -3,18 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ClubNav from './components/parts/ClubNav/index';
-import MainNav from './components/parts/MainNav/index';
-import Footer from './components/parts/Footer/index';
+
 import './scss/main.scss'
 // import Bootsttrap from 'bootstrap'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ClubNav />
-    <MainNav />
+
     <App />
-    <Footer id="main-footer"/>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

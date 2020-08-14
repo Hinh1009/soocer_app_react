@@ -16,15 +16,11 @@ class Table extends Component {
 
     renderList(list) {
         return list.map((item, i) => {
-            let { tenDoiBong, logoDoiBong, soTranThang, soTranHoa, soTranThua, soBanThang, soBanThua } = item
+            let { tenDoiBong, logoDoiBong, soTranThang, soTranHoa, soTranThua, soBanThang, soBanThua, Diem, hieuSo } = item
             soTranThang = parseInt(soTranThang)
             soTranThua = parseInt(soTranThua)
             soTranHoa = parseInt(soTranHoa)
-            soBanThang = parseInt(soBanThang)
-            soBanThua = parseInt(soBanThua)
             let soTranDaDa = soTranThang + soTranHoa + soTranThua
-            let hieuSo = soBanThang - soBanThua
-            let diemSo = soTranThang * 3 + soTranHoa
             let positions = []
             for (let i = 0; i < 100; i++) {
                 positions.push(i)
@@ -36,7 +32,7 @@ class Table extends Component {
                     key={i}
                 >
                     <td style={{ textAlign: 'center' }}>{positions[i + 1]}</td>
-                    <td style={{ paddingLeft: "120px" }}><span>{logoDoiBong}</span> <span style={{paddingLeft:'25px'}}>{tenDoiBong}</span></td>
+                    <td style={{ paddingLeft: "120px" }}><span>{logoDoiBong}</span> <span style={{ paddingLeft: '25px' }}>{tenDoiBong}</span></td>
                     <td style={{ textAlign: 'center' }}>{soTranDaDa}</td>
                     <td style={{ textAlign: 'center' }}>{soTranThang}</td>
                     <td style={{ textAlign: 'center' }}>{soTranHoa}</td>
@@ -44,7 +40,7 @@ class Table extends Component {
                     <td style={{ textAlign: 'center' }}>{soBanThang}</td>
                     <td style={{ textAlign: 'center' }}>{soBanThua}</td>
                     <td style={{ textAlign: 'center' }}>{hieuSo}</td>
-                    <td style={{ textAlign: 'center' }}>{diemSo}</td>
+                    <td style={{ textAlign: 'center' }}>{Diem}</td>
                 </tr>
             )
         })
