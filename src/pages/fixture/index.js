@@ -12,15 +12,6 @@ class Fixture extends Component {
 
     render() {
         return (
-            // <Layout>
-            //     <Header></Header>
-            //     <Content className="container">
-            //         <CTitle>This is Epl Fixture</CTitle>
-            //         <CSpacer></CSpacer>
-            //         <CBroadcast></CBroadcast>
-            //     </Content>
-            //     <Footer></Footer>
-            // </Layout>
             <div>
                 <Header />
                 <div className="container">

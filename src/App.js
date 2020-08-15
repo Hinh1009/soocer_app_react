@@ -6,6 +6,8 @@ import Home from './pages/home';
 import Fixture from './pages/fixture';
 import Player from './pages/player';
 import Tables from './pages/tables';
+import AddFixture from './pages/admin/fixtures'
+import AddPlayer from './pages/admin/players'
 
 import {
   BrowserRouter as Router,
@@ -37,6 +39,12 @@ class App extends Component {
             </Route>
             <Route path='/tables'>
               <Tables />
+            </Route>
+            <Route path='/admin/fixture'>
+              <AddFixture />
+            </Route>
+            <Route path='/admin/players'>
+              <AddPlayer />
             </Route>
           </Switch>
         </div>

@@ -8,17 +8,6 @@ import Footer from '../../components/parts/Footer'
 class Table extends Component {
     render() {
         return (
-            //    <Layout>
-            //        <Header></Header>
-            //        <Content className="container">
-            //            <div>
-            //                <CTitle>Table</CTitle>
-            //                <CSpacer></CSpacer>
-            //                <CTable></CTable>
-            //            </div>
-            //        </Content>
-            //        <Footer></Footer>
-            //    </Layout>
             <div>
                 <Header />
                 <CTitle>Table</CTitle>
