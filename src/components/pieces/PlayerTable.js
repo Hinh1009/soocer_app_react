@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
 class Table extends Component {
   // constructor(props) {
@@ -19,13 +20,14 @@ class Table extends Component {
 
   renderList(list) {
     return list.map((item, i) => {
-      let { tenCauThu, avatarUrl, soAo, viTri, club, quocTich } = item
+      let { tenCauThu, avatarUrl, soAo, viTri, club, quocTich, _id } = item
       // console.log("item club", tenDoiBong)
+      console.log("item", item)
       return (
-        <tr key={i}>
-          <td><a href="#"
-            style={{ color: 'black' }}
-          ><img src={avatarUrl} /> {tenCauThu}</a></td>
+        <tr
+          onClick={() => this.props.history.push(`/player-details?id=${_id}`)}
+          key={i}>
+          <td><img src={avatarUrl} style={{ width: '30px', height: '30px' }} /> {tenCauThu}</td>
           <td>{soAo}</td>
           <td>{viTri}</td>
           <td>{quocTich}</td>
@@ -59,4 +61,4 @@ class Table extends Component {
   }
 }
 
-export default Table
+export default withRouter(Table)

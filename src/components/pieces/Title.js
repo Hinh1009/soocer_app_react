@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import '../../scss/main.scss'
 class Title extends Component {
   // constructor(props) {
   //   super(props)
@@ -7,9 +7,12 @@ class Title extends Component {
 
   render() {
     return (
-      <div className="c-title">
-        {this.props.children}
+      <div className="page-hero">
+        <div className="c-title">
+          {this.props.children}
+        </div>
       </div>
+
     )
   }
 }

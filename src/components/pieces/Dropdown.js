@@ -12,10 +12,12 @@ class Dropdown extends Component {
     }
   }
   render() {
-    let {options,value} = this.props
-   console.log(options)
-      return (
+    let { options, value } = this.props
+    //  console.log("opt",options)
+    return (
       <select
+        variant="success"
+        id="dropdown-basic"
         className="c-dropdown"
         value={value}
         onChange={this.onChange}>

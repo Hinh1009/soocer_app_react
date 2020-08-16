@@ -11,8 +11,9 @@ class AddFixture extends Component {
         return (
             <div>
                 <Header />
-                <CTitle>Add fixtures</CTitle>
+                
                 <div className="container">
+                <CTitle>Add fixtures</CTitle>
                     <CSpacer />
                     <AddMatch />
                 </div>

@@ -12,9 +12,14 @@ class AddMatch extends Component {
             doiKhach: '',
             stadium: '',
             filter: {
-                clubId: '' //dropdown
+                clubId: '', //dropdown,
+                clubId2: '',
             },
-            optionTeams: [
+            optionLogos: [
+                { value: '', text: "Select logo" }
+
+            ],
+            optionClubs: [
                 { value: '', text: "Select club" }
             ],
             optionStadiums: [
@@ -22,9 +27,9 @@ class AddMatch extends Component {
             ],
             vongDau: '',
             soBanDoiNha: '',
-            soBanDoiKhach: '',
-            thoiGian: '',
-            hightLightUrl: ''
+            soBanDoiKhach: ''
+            // thoiGian: '',
+            // hightLightUrl: ''
         }
         this.handleRound = this.handleRound.bind(this)
         this.setPageConfig = this.setPageConfig.bind(this)
@@ -37,6 +42,7 @@ class AddMatch extends Component {
         let state = this.state
         this.callOptionClubs()
         this.callOptionStadiums()
+        this.callOptionLogos()
     }
 
     setPageConfig(config) {
@@ -54,6 +60,20 @@ class AddMatch extends Component {
     handleAwayGoals(e) {
         this.setState({ soBanDoiKhach: e.target.value })
     }
+    callOptionLogos() {
+        Axios.request({
+            url: 'http://localhost:1900/api/team',
+            method: "GET"
+        }).then(res => {
+            let clubs = res.data
+            let optionLogos = [
+                { value: '', text: 'Select logo' }, ...clubs.map(club => {
+                    return { value: club._id, text: club.logoDoiBong }
+                })
+            ]
+            this.setState({ optionLogos })
+        })
+    }
 
     callOptionClubs() {
         Axios.request({
@@ -67,7 +87,6 @@ class AddMatch extends Component {
                 })
             ]
             this.setState({ optionClubs })
-            console.log("optClubs", optionClubs)
         })
     }
 
@@ -83,28 +102,32 @@ class AddMatch extends Component {
                 })
             ]
             this.setState({ optionStadiums })
-            console.log("optStadiums", optionStadiums)
         })
     }
 
     handleClick() {
         let newMatch = {
             vongDau: this.state.vongDau,
+            logoDoiChuNha: [
+                { _id: this.state.filter.clubId }
+            ],
+            logoDoiKhach: [
+                { _id: this.state.filter.clubId2 }
+            ],
             doiChuNha: [
                 { _id: this.state.filter.clubId }
             ],
             doiKhach: [
-                { _id: this.state.filter.clubId }
+                { _id: this.state.filter.clubId2 }
             ],
             stadium: [
                 { _id: this.state.filter.clubId }
             ],
             soBanDoiNha: this.state.soBanDoiNha,
             soBanDoiKhach: this.state.soBanDoiKhach,
-            thoiGian: this.state.thoiGian,
-            hightLightUrl: this.state.hightLightUrl
+            // thoiGian: this.state.thoiGian,
+            // hightLightUrl: this.state.hightLightUrl
         }
-        console.log("new match", newMatch)
 
         Axios.post('http://localhost:1900/api/matches', newMatch)
             .then(() => {
@@ -116,7 +139,7 @@ class AddMatch extends Component {
     }
 
     render() {
-        let { filter, optionClubs, optionStadiums } = this.state
+        let { filter, optionLogos, optionClubs, optionStadiums } = this.state
         // console.log(optionClubs)
         return (
             <div>
@@ -127,23 +150,38 @@ class AddMatch extends Component {
                 </div>
                 <div>
                     <div>Add home team</div>
-                    {/* <CDropdown
+                    <CDropdown
                         value={filter.clubId}
                         options={optionClubs}
                         onChange={(value) => {
-                            this.setPageConfig({ filter: { clubId: value } })
+                            this.setPageConfig({ filter: { ...filter, clubId: value } })
                         }}
-                    /> */}
+                    />
+                    <CDropdown
+                        value={filter.clubId}
+                        options={optionLogos}
+                        onChange={(value) => {
+                            this.setPageConfig({ filter: { ...filter, clubId: value } })
+                        }}
+                    />
                 </div>
+
                 <div>
                     <div>Add away team</div>
-                    {/* <CDropdown
-                        value={filter.clubId}
+                    <CDropdown
+                        value={filter.clubId2}
                         options={optionClubs}
                         onChange={(value) => {
-                            this.setPageConfig({ filter: { clubId: value } })
+                            this.setPageConfig({ filter: { ...filter, clubId2: value } })
                         }}
-                    /> */}
+                    />
+                    <CDropdown
+                        value={filter.clubId2}
+                        options={optionLogos}
+                        onChange={(value) => {
+                            this.setPageConfig({ filter: { ...filter, clubId: value } })
+                        }}
+                    />
                 </div>
                 <div>
                     <div>Add home team's stadium</div>
@@ -151,7 +189,7 @@ class AddMatch extends Component {
                         value={filter.clubId}
                         options={optionStadiums}
                         onChange={(value) => {
-                            this.setPageConfig({ filter: { clubId: value } })
+                            this.setPageConfig({ filter: { ...filter, clubId: value } })
                         }}
                     />
                 </div>

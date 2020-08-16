@@ -8,6 +8,7 @@ import Player from './pages/player';
 import Tables from './pages/tables';
 import AddFixture from './pages/admin/fixtures'
 import AddPlayer from './pages/admin/players'
+import AddTeams from './pages/admin/teams'
 
 import {
   BrowserRouter as Router,
@@ -45,6 +46,9 @@ class App extends Component {
             </Route>
             <Route path='/admin/players'>
               <AddPlayer />
+            </Route>
+            <Route path='/admin/teams'>
+              <AddTeams />
             </Route>
           </Switch>
         </div>

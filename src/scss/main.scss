@@ -16,7 +16,24 @@
 .logo {
     border-radius: 100%;
 }
- 
+//banner scss
+.page-hero{
+    background-color: rgb(61, 25, 91);
+    margin-top: -2rem;
+    background-image: url(https://www.premierleague.com/resources/prod/3cfdf38-2800/i/bg-elements/heading-bg-desktop.svg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    margin-bottom: 2rem;
+    padding:150px 2.5rem 0 2.5rem;
+    position: relative;
+    color:white;
+    font-size: 5rem;
+}
+
+.td{
+  font-size:15px;
+}
 // Footer scss
 .full {
     width: 100%;    

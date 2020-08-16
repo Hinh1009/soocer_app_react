@@ -36,13 +36,16 @@ export default class MainNav extends Component {
                         <NavDropdown title="Admin" id="collasible-nav-dropdown">
                             <Nav.Item>
                                 <NavDropdown.Item href="/admin/players" className="white-text">
-                                    Add & update players
+                                    Add players
                                         </NavDropdown.Item>
                                 <NavDropdown.Item href="/admin/fixture" className="white-text">
                                     Fix fixture
                                         </NavDropdown.Item>
-                                <NavDropdown.Item  className="white-text">
+                                <NavDropdown.Item className="white-text">
                                     Update results
+                                        </NavDropdown.Item>
+                                <NavDropdown.Item href="/admin/teams" className="white-text">
+                                    Add teams
                                         </NavDropdown.Item>
                             </Nav.Item>
                         </NavDropdown>

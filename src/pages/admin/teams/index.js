@@ -1,25 +1,28 @@
 import React, { Component } from 'react'
-import Header from '../../../components/parts/Header'
-import Footer from '../../../components/parts/Footer'
 import CTitle from '../../../components/pieces/Title'
 import CSpacer from '../../../components/pieces/Spacer'
-import AddPlayer from '../../../components/parts/AddPlayer'
+import Header from '../../../components/parts/Header'
+import Footer from '../../../components/parts/Footer'
+import AddTeam from '../../../components/parts/AddTeam'
 
-class AddPlayers extends Component {
+class AddTeams extends Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <div>
                 <Header />
-
                 <div className="container">
-                    <CTitle>Add players</CTitle>
+                    <CTitle>Add team</CTitle>
                     <CSpacer />
-                    <AddPlayer />
+                    <AddTeam />
                 </div>
                 <Footer />
             </div>
-        )
+        );
     }
 }
 
-export default AddPlayers
+export default AddTeams
