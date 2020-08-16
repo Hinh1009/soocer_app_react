@@ -13,11 +13,12 @@ class AddPlayers extends Component {
             canNang: '',
             club: '',
             filter: {
-                clubId:''
+                clubId: ''
             },
             optionClubs: [
                 { value: '', text: 'Select club' }
-            ]
+            ],
+            avatarUrl: ''
         }
         this.handleName = this.handleName.bind(this)
         this.handleNumber = this.handleNumber.bind(this)
@@ -25,6 +26,7 @@ class AddPlayers extends Component {
         this.handleNational = this.handleNational.bind(this)
         this.handleHeight = this.handleHeight.bind(this)
         this.handleWeight = this.handleWeight.bind(this)
+        this.handleAva = this.handleAva.bind(this)
         this.setPageConfig = this.setPageConfig.bind(this)
         this.handleClick = this.handleClick.bind(this)
     }
@@ -39,6 +41,10 @@ class AddPlayers extends Component {
 
     handleName(e) {
         this.setState({ tenCauThu: e.target.value })
+    }
+
+    handleAva(e) {
+        this.setState({ avatarUrl: e.target.value })
     }
 
     handleNumber(e) {
@@ -79,6 +85,7 @@ class AddPlayers extends Component {
     handleClick() {
         let newPlayer = {
             tenCauThu: this.state.tenCauThu,
+            avatarUrl:this.state.avatarUrl,
             soAo: this.state.soAo,
             viTri: this.state.viTri,
             quocTich: this.state.quocTich,
@@ -107,6 +114,10 @@ class AddPlayers extends Component {
                 <div>
                     <div>Add player's name</div>
                     <input onChange={this.handleName}></input>
+                </div>
+                <div>
+                    <div>Add player's avatarUrl</div>
+                    <input onChange={this.handleAva}></input>
                 </div>
                 <div>
                     <div>Add player's number</div>

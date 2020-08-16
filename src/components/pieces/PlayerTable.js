@@ -25,7 +25,7 @@ class Table extends Component {
       console.log("item", item)
       return (
         <tr
-          onClick={() => this.props.history.push(`/player-details?id=${_id}`)}
+          onClick={() => this.props.history.push(`/player-detail?id=${_id}`)}
           key={i}>
           <td><img src={avatarUrl} style={{ width: '30px', height: '30px' }} /> {tenCauThu}</td>
           <td>{soAo}</td>

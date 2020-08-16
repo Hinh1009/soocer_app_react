@@ -16,6 +16,7 @@ import {
   Route
 } from "react-router-dom";
 import './App.css'
+import PlayerDetail from './pages/player-detail';
 // import './App.css'
 class App extends Component {
   render() {
@@ -37,6 +38,9 @@ class App extends Component {
             </Route>
             <Route path='/player' exact>
               <Player />
+            </Route>
+            <Route path='/player-detail' exact>
+              <PlayerDetail />
             </Route>
             <Route path='/tables'>
               <Tables />
