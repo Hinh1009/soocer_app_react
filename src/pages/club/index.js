@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import CTitle from '../../components/pieces/Title'
 import CSpacer from '../../components/pieces/Spacer'
-import CBroadcast from '../../components/parts/FixtureBroadcasts'
 import Header from '../../components/parts/Header'
 import Footer from '../../components/parts/Footer'
+import ClubList from '../../components/parts/ClubList'
 
-class Fixture extends Component {
+class Club extends Component {
     constructor(props) {
         super(props)
     }
@@ -15,9 +15,9 @@ class Fixture extends Component {
             <div>
                 <Header />
                 <div className="container">
-                    <CTitle>Epl Fixture & Result</CTitle>
-                    <CSpacer></CSpacer>
-                    <CBroadcast></CBroadcast>
+                    <CTitle>Clubs</CTitle>
+                    <CSpacer />
+                    <ClubList />
                 </div>
                 <Footer />
             </div>
@@ -25,4 +25,4 @@ class Fixture extends Component {
     }
 }
 
-export default Fixture
+export default Club

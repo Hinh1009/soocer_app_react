@@ -6,8 +6,18 @@ import Footer from '../../components/parts/Footer';
 // import Button from '../../components/pieces/Button'
 
 class Home extends Component {
-
+    constructor(props) {
+        super(props)
+        const user = JSON.parse(localStorage.getItem('user')) || null
+        this.state = {
+            user: user
+        }
+    }
     render() {
+        // if (!this.state.user) {
+        //     window.location.href = "/login"
+        // }
+
         return (
             <div>
                 <Header />

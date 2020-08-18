@@ -40,8 +40,9 @@ class login extends Component {
 
     console.log(user)
     Axios.post('http://localhost:1900/api/auth/sign-in', user)
-      .then(() => {
-        // alert(`${this.state.email} login success`)
+      .then(res => {
+        // console.log("res data", res.data)
+        localStorage.setItem("user", JSON.stringify(res.data))
         window.location.href = HOMEPAGE
       })
       .catch((err) => {

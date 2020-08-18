@@ -7,6 +7,28 @@ import LogoImg from '../../pieces/Logo'
 import '../../../scss/main.scss'
 
 export default class MainNav extends Component {
+    constructor(props) {
+        super(props)
+        const user = JSON.parse(localStorage.getItem('user')) || null
+        let isAdmin = false
+        if (user) {
+            if (user.admin === true) {
+                isAdmin = true
+            }
+        }
+
+        this.state = {
+            user: user,
+            isAdmin: isAdmin
+        }
+    }
+
+    handleLogout = () => {
+        localStorage.removeItem("user")
+        window.location.reload(false)
+        // window.location.href("/login")
+    }
+
     render() {
         return (
             <Navbar collapseOnSelect expand="lg" sticky="top" className="main-nav-bar">
@@ -19,10 +41,10 @@ export default class MainNav extends Component {
                                 Home
                             </NavDropdown.Item>
                             <NavDropdown.Item href="/fixture" className="white-text">
-                                Fixture
+                                Fixture and Result
                             </NavDropdown.Item>
-                            <NavDropdown.Item Link to="/result" className="white-text">
-                                Results
+                            <NavDropdown.Item href="/club" className="white-text">
+                                Club
                                 </NavDropdown.Item>
                             <NavDropdown.Item href="/tables" className="white-text">
                                 Tables
@@ -33,28 +55,44 @@ export default class MainNav extends Component {
                             </NavDropdown.Item>
                             {/* <NavDropdown.Item href="#history" className="white-text">History</NavDropdown.Item> */}
                         </NavDropdown>
-                        <NavDropdown title="Admin" id="collasible-nav-dropdown">
-                            <Nav.Item>
-                                <NavDropdown.Item href="/admin/players" className="white-text">
-                                    Add players
+                        {(this.state.isAdmin) ?
+                            <NavDropdown title="Admin" id="collasible-nav-dropdown">
+                                <Nav.Item>
+                                    <NavDropdown.Item href="/admin/players" className="white-text">
+                                        Add players
                                         </NavDropdown.Item>
-                                <NavDropdown.Item href="/admin/fixture" className="white-text">
-                                    Fix fixture
+                                    <NavDropdown.Item href="/admin/fixture" className="white-text">
+                                        Add fixture
                                         </NavDropdown.Item>
-                                <NavDropdown.Item className="white-text">
-                                    Update results
+                                    <NavDropdown.Item href="/admin/result" className="white-text">
+                                        Update results
                                         </NavDropdown.Item>
-                                <NavDropdown.Item href="/admin/teams" className="white-text">
-                                    Add teams
+                                    <NavDropdown.Item href="/admin/teams" className="white-text">
+                                        Add teams
                                         </NavDropdown.Item>
-                            </Nav.Item>
-                        </NavDropdown>
+                                </Nav.Item>
+                            </NavDropdown>
+                            : null
+                        }
                     </Nav>
                     <Nav>
-                        <Nav.Link eventKey={2} href="#usernames" style={{ color: "white" }}>Username</Nav.Link>
-                        <Nav.Link eventKey={3} style={{ color: "white" }}>
-                            <Link to="/login">Login</Link>
-                        </Nav.Link>
+                        {this.state.user && this.state.isAdmin ?
+                            <Nav.Link eventKey={2} href="#usernames" style={{ color: "white" }}>Hello admin {this.state.user.name}</Nav.Link>
+                            : null
+                        }
+                        {this.state.user && !this.state.isAdmin ?
+                            <Nav.Link eventKey={2} href="#usernames" style={{ color: "white" }}>Hello {this.state.user.name}</Nav.Link>
+                            : null
+                        }
+                        {this.state.user ?
+                            <Nav.Link eventKey={2} href="#usernames" style={{ color: "white" }} onClick={this.handleLogout}>Logout</Nav.Link>
+                            : null
+                        }
+                        {!this.state.user ?
+                            <Nav.Link href="/login" eventKey={3} style={{ color: "white" }}>Login
+                            </Nav.Link>
+                            : null
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -28,9 +28,7 @@ class Table extends Component {
             console.log("position", positions)
 
             return (
-                <tr
-                    key={i}
-                >
+                <tr key={i}>
                     <td style={{ textAlign: 'center' }}>{positions[i + 1]}</td>
                     <td style={{ paddingLeft: "120px" }}><img className="badge-image badge-image--50 js-badge-image"
                         src={logoDoiBong} style={{ width: '30px', height: '30px' }}></img> <span style={{ paddingLeft: '25px' }}>{tenDoiBong}</span></td>

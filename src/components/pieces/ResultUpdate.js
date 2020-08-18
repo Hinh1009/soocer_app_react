@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../../scss/main.scss'
+import { withRouter } from 'react-router-dom'
 
-class Broadcast extends Component {
+class ResultUpdate extends Component {
 
     renderList(list) {
         return list.map((item, i) => {
-            let { doiChuNha, doiKhach, stadium, soBanDoiNha, soBanDoiKhach, vongDau, logoDoiChuNha, logoDoiKhach, status } = item
+            let { status, doiChuNha, doiKhach, stadium, soBanDoiNha, soBanDoiKhach, vongDau, logoDoiChuNha, logoDoiKhach, _id } = item
             // console.log("item", item)
-            // console.log("trang thai tran dau", item.status)
             // console.log("logo", logoDoiChuNha)
             let logoHomeTeamLink = logoDoiChuNha[0] && logoDoiChuNha[0].logoDoiBong
             let logoAwayTeamLink = logoDoiKhach[0] && logoDoiKhach[0].logoDoiBong
+            // console.log("id tran dau", _id)
             // console.log(logolink)
             return (
-                <tr key={i}>
+                <tr
+                    onClick={() => this.props.history.push(`/admin/result-update?id=${_id}`)}
+                    key={i}>
                     <td style={{
                         background: "rgb(61, 25, 91)",
                         color: "white",
@@ -54,10 +57,10 @@ class Broadcast extends Component {
                         }}
                         >{soBanDoiKhach}</td>
                     }
-
                     <td style={{ textAlign: 'right' }}>{this.getAwayTeams(doiKhach)} </td>
                     <td style={{ textAlign: 'center' }}><img src={logoAwayTeamLink} style={{ width: '30px', height: '30px' }}></img></td>
                     <td><FontAwesomeIcon icon="futbol" /> {this.getStadiums(stadium)}</td>
+                    {/* <td><button><FontAwesomeIcon icon="toolbox" /></button></td> */}
                 </tr >
             )
 
@@ -96,4 +99,4 @@ class Broadcast extends Component {
     }
 }
 
-export default Broadcast
+export default withRouter(ResultUpdate)

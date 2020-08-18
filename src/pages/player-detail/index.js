@@ -11,7 +11,6 @@ class PlayerDetail extends Component {
         super(props)
 
         this.state = {
-            requesting: false,
             playerId: null,
             playerInfo: null
         }
@@ -29,7 +28,7 @@ class PlayerDetail extends Component {
         }).then(res => {
             let item = res.data
             this.setState({ playerInfo: item })
-            console.log(item)
+            // console.log(item)
         })
 
     }
@@ -38,7 +37,7 @@ class PlayerDetail extends Component {
 
     render() {
         let { playerInfo } = this.state
-        console.log("info of SAka", playerInfo)
+        // console.log("info of SAka", playerInfo)
 
         return playerInfo ? (
             <div>
@@ -49,7 +48,7 @@ class PlayerDetail extends Component {
                         <span style={{ paddingLeft: '40px' }}>{playerInfo.tenCauThu}</span>
                         <span style={{ paddingLeft: '40px' }}>{playerInfo.soAo}</span>
                     </CTitle>
-
+                    <CSpacer />
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Card
                             style={{
@@ -61,7 +60,9 @@ class PlayerDetail extends Component {
                             }}
                             bordered={true}>
                             <h3>Overview</h3><hr />
-                            <div style={{ fontSize: '15px', display: 'flex', justifyContent: `space-between` }}><span>Club </span><span>{playerInfo.club[0].tenDoiBong}</span> </div><hr />
+                            <div style={{ fontSize: '15px', display: 'flex', justifyContent: `space-between` }}>
+                                <span>Club </span>
+                                <span> {playerInfo.club[0].tenDoiBong}</span> </div><hr />
                             <div style={{ fontSize: '15px', display: 'flex', justifyContent: 'space-between' }}><span>Position </span><span>{playerInfo.viTri}</span></div><hr />
                             <h3>Epl record</h3><hr />
                             <div style={{ fontSize: '15px', display: 'flex', justifyContent: `space-between` }}><span>Apperances </span><span>3</span> </div><hr />
@@ -92,7 +93,8 @@ class PlayerDetail extends Component {
                 <div>
                     <Header />
                     <div className="container">
-                        <CTitle> Not have any player with this</CTitle>
+                        <CTitle> Not have any player with this id</CTitle>
+                        <CSpacer />
                     </div>
                     <Footer />
                 </div>

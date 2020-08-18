@@ -26,15 +26,15 @@ class AddMatch extends Component {
                 { value: '', text: "Select home team stadium" }
             ],
             vongDau: '',
-            soBanDoiNha: '',
-            soBanDoiKhach: ''
+            // soBanDoiNha: '',
+            // soBanDoiKhach: ''
             // thoiGian: '',
             // hightLightUrl: ''
         }
         this.handleRound = this.handleRound.bind(this)
         this.setPageConfig = this.setPageConfig.bind(this)
-        this.handleHomeGoals = this.handleHomeGoals.bind(this)
-        this.handleAwayGoals = this.handleAwayGoals.bind(this)
+        // this.handleHomeGoals = this.handleHomeGoals.bind(this)
+        // this.handleAwayGoals = this.handleAwayGoals.bind(this)
         this.handleClick = this.handleClick.bind(this)
     }
 
@@ -53,13 +53,13 @@ class AddMatch extends Component {
         this.setState({ vongDau: e.target.value })
     }
 
-    handleHomeGoals(e) {
-        this.setState({ soBanDoiNha: e.target.value })
-    }
+    // handleHomeGoals(e) {
+    //     this.setState({ soBanDoiNha: e.target.value })
+    // }
 
-    handleAwayGoals(e) {
-        this.setState({ soBanDoiKhach: e.target.value })
-    }
+    // handleAwayGoals(e) {
+    //     this.setState({ soBanDoiKhach: e.target.value })
+    // }
     callOptionLogos() {
         Axios.request({
             url: 'http://localhost:1900/api/team',
@@ -123,8 +123,8 @@ class AddMatch extends Component {
             stadium: [
                 { _id: this.state.filter.clubId }
             ],
-            soBanDoiNha: this.state.soBanDoiNha,
-            soBanDoiKhach: this.state.soBanDoiKhach,
+            // soBanDoiNha: this.state.soBanDoiNha,
+            // soBanDoiKhach: this.state.soBanDoiKhach,
             // thoiGian: this.state.thoiGian,
             // hightLightUrl: this.state.hightLightUrl
         }
@@ -164,6 +164,13 @@ class AddMatch extends Component {
                             this.setPageConfig({ filter: { ...filter, clubId: value } })
                         }}
                     />
+                    <CDropdown
+                        value={filter.clubId}
+                        options={optionStadiums}
+                        onChange={(value) => {
+                            this.setPageConfig({ filter: { ...filter, clubId: value } })
+                        }}
+                    />
                 </div>
 
                 <div>
@@ -183,7 +190,7 @@ class AddMatch extends Component {
                         }}
                     />
                 </div>
-                <div>
+                {/* <div>
                     <div>Add home team's stadium</div>
                     <CDropdown
                         value={filter.clubId}
@@ -192,15 +199,15 @@ class AddMatch extends Component {
                             this.setPageConfig({ filter: { ...filter, clubId: value } })
                         }}
                     />
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                     <div>Add home team goals</div>
                     <input onChange={this.handleHomeGoals}></input>
                 </div>
                 <div>
                     <div>Add away team goals</div>
                     <input onChange={this.handleAwayGoals}></input>
-                </div>
+                </div> */}
                 <button onClick={this.handleClick}>Add match</button>
             </div>
         )
