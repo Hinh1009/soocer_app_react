@@ -1,0 +1,85 @@
+.container {
+    width: 100%;
+}
+
+.floatleft {
+    float:left; 
+    width: 30%;
+    background-color: whitesmoke;
+    height: 5400px;
+    margin: 1%;
+}
+
+.floatright {
+float: right;
+    background-color: #00ff00;
+    height: 5400px;
+    width: 66%;
+    margin: 1%;
+    background: white ;
+}
+
+ul li{
+    display: inline-block;
+    padding-left: 15px;
+}
+.subHeader {
+    color: rgb(61, 25, 91);
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    clear: both;
+}
+
+.club-icon, .mini-header{
+    display: inline-block;
+    vertical-align: middle;
+}
+figure {
+    max-width: 500px;
+}
+
+#mini-link {
+    display: block;
+}
+
+p:hover {
+    text-decoration: underline ;
+}
+
+.tag {
+    margin-bottom: 0.8rem;
+    min-height: 13px;
+    color: rgb(233, 0, 82);
+    font-family: PremierSans-Bold-Italic, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    display: block;
+    padding-top: 10px;
+}
+
+.thumbnail figcaption::before {
+    width: 90%;
+    height: 0.4rem;
+    background-image: linear-gradient(270deg, rgb(150, 60, 255), rgb(255, 40, 130));
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    transition: all 0.4s ease 0s;
+}
+.title {
+    line-height: 1.3;
+    font-family: PremierSans-Regular, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    overflow-wrap: break-word;
+    transition: all 0.1s ease 0s;
+}
+
+.relatedArticle p {
+    vertical-align: sub;
+    line-height: 1.36;
+    font-size: 1.1rem;
+}   

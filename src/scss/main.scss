@@ -3,6 +3,8 @@
 
 .main-nav-bar {
     background: rgb(61, 25, 91);
+    width: 100%;
+    position: sticky;
 }
 
 #collasible-nav-dropdown {
@@ -35,30 +37,27 @@
   font-size:15px;
 }
 // Footer scss
-.full {
-    width: 100%;    
-}
-.gap {
-	height: 30px;
-	width: 100%;
-	clear: both;
-	display: block;
-}
 
 #main-footer{
-  position: relative;
+  position: fixed;
+  bottom: 0;
   width:100%;
-  padding-top: 60px;
+  height: 450px;
+  // display: none;
+
 }
 
 .footer {
 	background: rgb(61, 25, 91);
-	height: auto;
-	padding-bottom: 30px;
 	position: relative;
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
-	border-top: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+  background-image: url('https://www.premierleague.com/resources/prod/4e98428-2849/i/bg-elements/pl-footer-m-bottom.svg'),url('https://www.premierleague.com/resources/prod/4e98428-2849/i/bg-elements/pl-footer-m-top.svg'); 
+  background-position: 0 0,0 100%;
+  background-repeat: no-repeat,no-repeat;
+  background-size: 100% auto; 
+  padding: 3rem 1rem;
 }
 .footer p {
 	margin: 0;

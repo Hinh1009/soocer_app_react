@@ -15,7 +15,7 @@ class Fixture extends Component {
             <div>
                 <Header />
                 <div className="container">
-                    <CTitle>Epl Fixture & Result</CTitle>
+                    <CTitle>Fixtures &amp; Results</CTitle>
                     <CSpacer></CSpacer>
                     <CBroadcast></CBroadcast>
                 </div>
