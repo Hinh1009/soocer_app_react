@@ -19,24 +19,24 @@ export default class Footer extends Component {
                                 <h6 id="contact">CONTACT </h6>
                                 <ul>
                                     <li>
-                                        <a className="email" href="#">dinhhinh10091998@gmail.com </a>
-                                        <a className="email" href="#">nguyenhoantrung.1102@gmail.com </a>
-                                        <a className="email" href="#">mindx.web37 </a>
+                                        <a className="email" href="/#">dinhhinh10091998@gmail.com </a>
+                                        {/* <a className="email" href="#">nguyenhoantrung.1102@gmail.com </a> */}
+                                        <a className="email" href="/#">Hanoi University of Science and Technology </a>
                                     </li>
                                     <br />
                                 </ul>
                             </div>
                             <div className="col-lg-3 col-sm-2 col-xs-3" id="last-col-container">
                                 <ul>
-                                    <li> <h5> <a href="#about-us" id="last-col-1"> ABOUT US</a></h5></li>
-                                    <li> <h5><a href="#fantsy-scout" id="last-col-2"> FANTASY SCOUT </a> </h5></li>
-                                    <li> <h5><a href="#social-media" id="last-col-3"> SOCIAL MEDIA </a> </h5></li>
+                                    <li> <h5> <a href="/#about-us" id="last-col-1"> ABOUT US</a></h5></li>
+                                    <li> <h5><a href="/#fantsy-scout" id="last-col-2"> FANTASY SCOUT </a> </h5></li>
+                                    <li> <h5><a href="/#social-media" id="last-col-3"> SOCIAL MEDIA </a> </h5></li>
                                 </ul>
                                 <div className="rounded-social-buttons">
-                                    <a className="social-button facebook" href="https://www.facebook.com/premierleague" target="_blank"><i className="fab fa-facebook-f"></i></a>
-                                    <a className="social-button youtube" href="https://www.youtube.com/premierleague" target="_blank"><i className="fab fa-youtube"></i></a>
-                                    <a className="social-button twitter" href="https://twitter.com/premierleague" target="_blank"><i className="fab fa-twitter"></i></a>
-                                    <a className="social-button instagram" href="https://www.instagram.com/premierleague/" target="_blank"><i className="fab fa-instagram"></i></a>
+                                    <a className="social-button facebook" href="https://www.facebook.com/premierleague"><i className="fab fa-facebook-f"></i></a>
+                                    <a className="social-button youtube" href="https://www.youtube.com/premierleague"><i className="fab fa-youtube"></i></a>
+                                    <a className="social-button twitter" href="https://twitter.com/premierleague"><i className="fab fa-twitter"></i></a>
+                                    <a className="social-button instagram" href="https://www.instagram.com/premierleague/"><i className="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>

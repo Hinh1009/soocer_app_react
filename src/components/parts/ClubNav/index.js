@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+// import Nav from 'react-bootstrap/Nav'
 import '../../../scss/main.scss'
 
 export default class ClubNav extends Component {
@@ -16,7 +16,8 @@ export default class ClubNav extends Component {
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t3.png"
                                     srcSet="https://resources.premierleague.com/premierleague/badges/50/t3@x2.png 2x"
-                                    style={{ width: "35px", height: "35px"}}></img>
+                                    style={{ width: "35px", height: "35px"}}
+                                    alt="description"></img>
                             </div>
                         </a>
                     </li>
@@ -27,7 +28,9 @@ export default class ClubNav extends Component {
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t7.png"
                                     srcSet="https://resources.premierleague.com/premierleague/badges/50/t7@x2.png 2x"
-                                    style={{ width: "35px", height: "35px" }}></img>
+                                    style={{ width: "35px", height: "35px" }}
+                                    alt="description"
+                                    ></img>
                             </div>
                         </a>
                     </li>
@@ -38,7 +41,9 @@ export default class ClubNav extends Component {
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t36.png"
                                     srcSet="https://resources.premierleague.com/premierleague/badges/50/t36@x2.png 2x"
-                                    style={{ width: "35px", height: "35px" }}></img>
+                                    style={{ width: "35px", height: "35px" }}
+                                    alt="description"
+                                    ></img>
                             </div>
                         </a>
                     </li>
@@ -48,7 +53,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t90.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t90@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t90@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -59,7 +66,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t8.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t8@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t8@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -70,7 +79,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t31.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t31@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t31@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -81,7 +92,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t11.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t11@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t11@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -92,7 +105,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t54.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t54@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t54@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -103,7 +118,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t2.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t2@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t2@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -114,7 +131,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t13.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t13@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t13@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -125,7 +144,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t14.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t14@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t14@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -136,7 +157,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t43.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t43@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t43@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -147,7 +170,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t1.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t1@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t1@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -158,7 +183,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t4.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t4@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t4@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -169,7 +196,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t49.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t49@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t49@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -180,7 +209,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t20.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t20@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t20@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -191,7 +222,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t6.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t6@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t6@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -202,7 +235,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t35.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t35@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t35@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -213,7 +248,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t21.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t21@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t21@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>
@@ -224,7 +261,9 @@ export default class ClubNav extends Component {
                                 <img style={{ width: "35px", height: "35px" }}
                                     className="badge-image badge-image--50 js-badge-image"
                                     src="https://resources.premierleague.com/premierleague/badges/50/t39.png"
-                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t39@x2.png 2x">
+                                    srcSet="https://resources.premierleague.com/premierleague/badges/50/t39@x2.png 2x"
+                                    alt="description"
+                                    >
                                 </img>
                             </div>
                         </a>

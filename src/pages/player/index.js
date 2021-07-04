@@ -6,9 +6,6 @@ import Header from '../../components/parts/Header'
 import Footer from '../../components/parts/Footer'
 
 class Player extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         return (

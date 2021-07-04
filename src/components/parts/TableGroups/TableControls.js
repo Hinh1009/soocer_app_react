@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import Cbutton from '../../pieces/Button'
+import {Button} from '@material-ui/core'
+// import Button from '../../pieces/Button'
 import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons'
 
 class TableControls extends Component {
-  constructor(props) {
-    super(props)
-  }
-
+  
   genpageIndexNumbers(pageIndex, maxPage) {
     let result = [pageIndex]
     for (let i = 1; i < 3; i++) {
@@ -40,26 +38,34 @@ class TableControls extends Component {
     let maxPage = Math.ceil(count / pageSize)
     let pageIndexNumbers = this.genpageIndexNumbers(pageIndex, maxPage)
     return (
-      <div className="table-controls">
-        <Cbutton onClick={() => this.toPage(pageIndex - 1, maxPage)}><CaretLeftOutlined /></Cbutton>
+      <div className="table-controls"
+      style={{textAlign:"center"}}
+      >
+        <Button onClick={() => this.toPage(pageIndex - 1, maxPage)}><CaretLeftOutlined /></Button>
         {pageIndexNumbers.map(number => {
           let isCurrentPageIndex = number === pageIndex
           let clickHandler = () => this.toPage(number, maxPage)
           return isCurrentPageIndex
             ? (
-              <Cbutton key={number}
+              <Button
+              variant="contained" 
+              color="primary"
+              key={number}
                 style={{ textDecoration: 'underline' }}
                 onMouseOver={this.changeBackground}
-                onClick={clickHandler}>{number}</Cbutton>
+                onClick={clickHandler}>{number}</Button>
             )
             : (
-              <Cbutton key={number}
-                onClick={clickHandler}>{number}</Cbutton>
+              <Button
+              variant="contained"
+              color="primary" 
+              key={number}
+                onClick={clickHandler}>{number}</Button>
             )
 
 
         })}
-        <Cbutton onClick={() => this.toPage(pageIndex + 1, maxPage)}><CaretRightOutlined /></Cbutton>
+        <Button onClick={() => this.toPage(pageIndex + 1, maxPage)}><CaretRightOutlined /></Button>
 
       </div>
     )

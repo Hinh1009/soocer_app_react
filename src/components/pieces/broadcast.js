@@ -22,7 +22,9 @@ class Broadcast extends Component {
                         textAlign: 'center'
                     }}
                     >Round {vongDau}</td>
-                    <td style={{ textAlign: 'center' }}><img src={logoHomeTeamLink} style={{ width: '30px', height: '30px' }}></img></td>
+                    <td style={{ textAlign: 'center' }}><img src={logoHomeTeamLink} style={{ width: '30px', height: '30px' }}
+                    alt="description"
+                    ></img></td>
                     <td>{this.getHomeTeams(doiChuNha)}</td>
                     {(status === false) ?
                         <td style={{
@@ -56,7 +58,9 @@ class Broadcast extends Component {
                     }
 
                     <td style={{ textAlign: 'right' }}>{this.getAwayTeams(doiKhach)} </td>
-                    <td style={{ textAlign: 'center' }}><img src={logoAwayTeamLink} style={{ width: '30px', height: '30px' }}></img></td>
+                    <td style={{ textAlign: 'center' }}><img src={logoAwayTeamLink} style={{ width: '30px', height: '30px' }}
+                    alt="description"
+                    ></img></td>
                     <td><FontAwesomeIcon icon="futbol" /> {this.getStadiums(stadium)}</td>
                 </tr >
             )

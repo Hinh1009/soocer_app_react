@@ -1,20 +1,24 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button';
 
-class Button extends Component {
+class button extends Component {
   // constructor(props) {
   //   super(props)
   // }
 
   render() {
     return (
-      <button
-        className="btn"
-        style={this.props.style}
+      <Button
+        // className="btn"
+        // style={this.props.style}
+        variant="contained"
+        // color="#ff2882"
+        style={{width:"100%",backgroundColor:"#ff2882",color:"white"}}
         onClick={this.props.onClick}>
         {this.props.children}
-      </button>
+      </Button>
     )
   }
 }
 
-export default Button
+export default button

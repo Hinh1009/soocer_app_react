@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../../../components/parts/Header'
 import Footer from '../../../components/parts/Footer'
 import CTitle from '../../../components/pieces/Title'
-import CSpacer from '../../../components/pieces/Spacer'
+// import CSpacer from '../../../components/pieces/Spacer'
 import AddPlayer from '../../../components/parts/AddPlayer'
 
 class AddPlayers extends Component {
@@ -13,7 +13,6 @@ class AddPlayers extends Component {
 
                 <div className="container">
                     <CTitle>Add players</CTitle>
-                    <CSpacer />
                     <AddPlayer />
                 </div>
                 <Footer />

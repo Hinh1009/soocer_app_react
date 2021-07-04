@@ -1,28 +1,38 @@
-import React, { Component } from 'react'
-import CTitle from '../../components/pieces/Title'
-import CSpacer from '../../components/pieces/Spacer'
-import Header from '../../components/parts/Header'
-import Footer from '../../components/parts/Footer'
-import ClubList from '../../components/parts/ClubList'
+import React, { useState, useEffect } from "react";
+import CTitle from "../../components/pieces/Title";
+import CSpacer from "../../components/pieces/Spacer";
+import Header from "../../components/parts/Header";
+import Footer from "../../components/parts/Footer";
+import axios from "axios";
+import ClubList from "../../components/parts/ClubList";
 
-class Club extends Component {
-    constructor(props) {
-        super(props)
-    }
+function Club() {
+  const [clubList, setClubList] = useState([]);
 
-    render() {
-        return (
-            <div>
-                <Header />
-                <div className="container">
-                    <CTitle>Clubs</CTitle>
-                    <CSpacer />
-                    <ClubList />
-                </div>
-                <Footer />
-            </div>
-        )
-    }
+  useEffect(() => {
+    axios
+      .request({
+        url: "http://localhost:1900/api/team",
+        method: "GET",
+      })
+      .then((res) => {
+        let data = res.data;
+        console.log("DATA", data);
+        setClubList({ data });
+      });
+  }, []);
+
+  return (
+    <div>
+      <Header />
+      <div className="container">
+        <CTitle>Clubs</CTitle>
+        <CSpacer />
+        <ClubList clubs={clubList} />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-export default Club
+export default Club;

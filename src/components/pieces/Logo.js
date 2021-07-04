@@ -6,7 +6,7 @@ export default class LogoImg extends Component {
     render() {
         return (
             <a href="/" style={{ display: "inline-block" }} >
-                <img src={Logo} width="100" height="100"  className="logo"></img>
+                <img src={Logo} width="100" height="100"  className="logo" alt="description"></img>
             </a>
         )
     }

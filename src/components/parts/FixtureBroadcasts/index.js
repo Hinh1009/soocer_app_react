@@ -128,7 +128,9 @@ class FixtureBroadCasts extends Component {
 
 
     render() {
-        let { list, count, pageIndex, pageSize, filter, optionClubs } = this.state
+        let { list,
+            //  count, pageIndex, pageSize,
+              filter, optionClubs } = this.state
         return (
             <div className="c-table-group">
                 <div>
